@@ -1,4 +1,3 @@
-import React from 'react';
 import { AsociadosList } from './components/AsociadosList';
 
 function App() {
