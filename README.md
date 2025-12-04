@@ -22,8 +22,8 @@ Para cumplir con la **Tarea 2** y **Tarea 5** en un entorno frontend, se impleme
 
 ## 🛠 Stack Tecnológico
 
-*   **Core:** React 18, TypeScript.
-*   **Estilos:** Tailwind CSS (CDN para portabilidad).
+*   **Core:** React 18, TypeScript, Vite.
+*   **Estilos:** Tailwind CSS.
 *   **Gestión de Estado:** React Hooks (`useState`, `useEffect`, `useCallback`, Custom Hook `useAsociados`).
 *   **Tipado:** Interfaces estrictas y Enums para los estados del pipeline.
 
@@ -40,17 +40,29 @@ Para cumplir con la **Tarea 2** y **Tarea 5** en un entorno frontend, se impleme
 ├── types.ts               # Definiciones de Tipos y Enums
 ├── constants.ts           # Configuración y constantes globales
 ├── App.tsx                # Layout principal
-└── index.tsx              # Punto de entrada
+├── index.tsx              # Punto de entrada
+└── vite.config.ts         # Configuración de Build
 ```
 
-## 🧪 Cómo Probar la Solución
+## 🧪 Cómo Ejecutar y Desplegar
 
-1. **Visualizar la Lista:** Al cargar, la aplicación intentará consumir el JSON provisto. Si falla (por disponibilidad del enlace), cargará datos "Mock" automáticamente para demostración.
-2. **Filtrar:** Use el desplegable superior derecho para filtrar por estado (ej. "Expediente en Construcción").
-3. **Probar Validaciones (Backend):**
-    *   Busque un asociado con estado **"Expediente en Construcción"** y cuyo pago esté marcado como **Pendiente** (punto gris).
-    *   Haga clic en el botón **"Avanzar Etapa"**.
-    *   **Resultado:** Verá una alerta roja indicando que no se puede avanzar a "Pendiente Jurídico" debido a la falta de pago (Cumplimiento Tarea 5).
+### Desarrollo Local
+
+1.  Instalar dependencias:
+    ```bash
+    npm install
+    ```
+2.  Correr servidor de desarrollo:
+    ```bash
+    npm run dev
+    ```
+
+### Despliegue en Vercel
+
+1.  Subir este repositorio a GitHub.
+2.  Importar el proyecto en Vercel.
+3.  Vercel detectará automáticamente que es un proyecto **Vite**.
+4.  Dar clic en **Deploy**.
 
 ## 📝 Notas Adicionales
 
